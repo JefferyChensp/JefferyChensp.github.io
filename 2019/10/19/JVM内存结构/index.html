@@ -6,14 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://jefferychensp.github.io">
-  <title>JVM内存结构 | Hexo</title>
+  <title>JVM内存结构 | csp的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="方法区：是线程共享的区域，主要存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。方法区又叫老年代（Permanent Geneation），方便HotSpot虚拟机的垃圾收集器像管理堆内存一样来管理方法区。 虚拟机栈：栈中存储的都是局部变量，凡是定义在方法中的都是局部变量（方法外的是全局变量），for循环内部定义的也是局部变量，是先加载函数才能进行局部变量的定义，所以方">
 <meta name="keywords" content="JVM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JVM内存结构">
 <meta property="og:url" content="https:&#x2F;&#x2F;jefferychensp.github.io&#x2F;2019&#x2F;10&#x2F;19&#x2F;JVM%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84&#x2F;index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="csp的个人博客">
 <meta property="og:description" content="方法区：是线程共享的区域，主要存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据。方法区又叫老年代（Permanent Geneation），方便HotSpot虚拟机的垃圾收集器像管理堆内存一样来管理方法区。 虚拟机栈：栈中存储的都是局部变量，凡是定义在方法中的都是局部变量（方法外的是全局变量），for循环内部定义的也是局部变量，是先加载函数才能进行局部变量的定义，所以方">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;jefferychensp.github.io&#x2F;2019&#x2F;10&#x2F;19&#x2F;JVM%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84&#x2F;clipboard.png">
@@ -22,7 +22,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;jefferychensp.github.io&#x2F;2019&#x2F;10&#x2F;19&#x2F;JVM%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84&#x2F;clipboard.png">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="csp的个人博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -49,10 +49,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="img/xiamu.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		  <h1 class="header-author"><a href="/">JefferyChen</a></h1>
 		</hgroup>
 		
 
@@ -61,7 +61,11 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">文章</a></li>
+	        
+				<li><a href="/categories">分类</a></li>
+	        
+				<li><a href="/tags">标签</a></li>
 	        
 			</ul>
 		</nav>
@@ -107,13 +111,17 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="img/xiamu.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">JefferyChen</h1>
 			</hgroup>
 			
 			
+			
+				
+			
+				
 			
 				
 			
@@ -136,12 +144,16 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 25%"><a href="/tags/%E9%9A%8F%E7%AC%94/">文章</a></li>
+		        
+					<li style="width: 25%"><a href="/categories">分类</a></li>
+		        
+					<li style="width: 25%"><a href="/tags">标签</a></li>
 		        
 				</ul>
 			</nav>
@@ -330,7 +342,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 John Doe
+    		&copy; 2019 JefferyChen
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
